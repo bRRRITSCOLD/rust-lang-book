@@ -24,53 +24,92 @@ fn main() {
 
     // 3.2 Data Types
     let z: f64 = 2.0; // f64
-  println!("The value of z is: {z}");
-  let w: f32 = 3.0; // f32
-  println!("The value of w is: {w}");
+    println!("The value of z is: {z}");
+    let w: f32 = 3.0; // f32
+    println!("The value of w is: {w}");
 
-  // addition
-  let sum = 5 + 10;
+    // addition
+    let sum = 5 + 10;
 
-  // subtraction
-  let difference = 95.5 - 4.3;
+    // subtraction
+    let difference = 95.5 - 4.3;
 
-  // multiplication
-  let product = 4 * 30;
+    // multiplication
+    let product = 4 * 30;
 
-  // division
-  let quotient = 56.7 / 32.2;
-  let truncated = -5 / 3; // Results in -1
+    // division
+    let quotient = 56.7 / 32.2;
+    let truncated = -5 / 3; // Results in -1
 
-  // remainder
-  let remainder = 43 % 5;
+    // remainder
+    let remainder = 43 % 5;
 
-  let t = true;
+    let t = true;
 
-  let f: bool = false; // with explicit type annotation
+    let f: bool = false; // with explicit type annotation
 
-  let c = 'z';
-  let d: char = 'ℤ'; // with explicit type annotation
-  let heart_eyed_cat = '😻';
+    let c = 'z';
+    let d: char = 'ℤ'; // with explicit type annotation
+    let heart_eyed_cat = '😻';
 
-  let tup: (i32, f64, u8) = (500, 6.4, 1);
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
 
-  let (e, f, g) = tup;
+    let (e, f, g) = tup;
 
-  println!("The value of f is: {f}");
+    println!("The value of f is: {f}");
 
-  let h: (i32, f64, u8) = (500, 6.4, 1);
+    let h: (i32, f64, u8) = (500, 6.4, 1);
 
-  let five_hundred = h.0;
+    let five_hundred = h.0;
 
-  let six_point_four = h.1;
+    let six_point_four = h.1;
 
-  let one = h.2;
+    let one = h.2;
 
-  let i: [i32; 5] = [1, 2, 3, 4, 5];
+    let i: [i32; 5] = [1, 2, 3, 4, 5];
 
-  let j = [3; 5];
-  
-  let first = i[0];
-  let second = i[1];
+    let j = [3; 5];
+    
+    let first = i[0];
+    let second = i[1];
 
+  // 3.3 Functions
+    another_function(5);
+
+    print_labeled_measurement(5, 'h');
+
+    // statement
+    let s = 6;
+
+    // expression
+    let e = {
+        let e1 = 3;
+        e1 + 1
+    };
+
+    println!("The value of e is: {e}");
+
+    let f = five();
+
+    println!("The value of f is: {f}");
+
+    let po = plus_one(5);
+
+    println!("The value of po is: {po}");
+}
+
+fn another_function(x: i32) {
+    println!("The value of x in another_function is: {x}");
+}
+
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement in print_labeled_measurement is: {value}{unit_label}");
+}
+
+fn five() -> i32 {
+    5
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
 }
