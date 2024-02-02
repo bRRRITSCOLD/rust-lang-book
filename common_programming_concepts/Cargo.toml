@@ -1,3 +1,4 @@
+workspace = { members = ["understanding_ownership"] }
 [package]
 name = "common_programming_concepts"
 version = "0.1.0"
